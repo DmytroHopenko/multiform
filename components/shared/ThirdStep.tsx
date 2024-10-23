@@ -38,16 +38,16 @@ export const ThirdStep = ({period, setSelectedThings, selectedThings}: ThirdForm
     return (
         <div>
             <div>
-                <span className="text-denim text-[24px] font-bold mb-2">
+                <span className="text-denim text-[24px] md:text-[32px] font-bold mb-2">
                     Pick add-ons                
                 </span>
-                <p className="text-grey text-[16px] font-normal w-[273px]">
+                <p className="text-grey text-[16px] font-normal w-[273px] md:w-full">
                 Add-ons help enhance your gaming experience.
                 </p>
             </div>
             <div className="flex flex-col gap-4 my-5">
                 {additionalThings.map((addition) => (
-                    <div className={`flex items-center rounded-lg border border-border-color h-[62px] w-[295px] p-4 gap-4 ${checkedItems.includes(addition.id) && "border-purple bg-very-light-grey"}`} key={addition.id}>
+                    <div className={`flex items-center rounded-lg border border-border-color h-[62px] w-[295px] md:h-[81px] md:w-full p-4 gap-4 ${checkedItems.includes(addition.id) && "border-purple bg-very-light-grey"}`} key={addition.id}>
                         <Checkbox checked={checkedItems.includes(addition.id)}
               onCheckedChange={() => toggleAddition(addition.id, addition)}/>
                         <div className="flex flex-col gap-2">

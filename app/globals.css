@@ -11,7 +11,7 @@ body {
     text-wrap: balance;
   }
   .wrapper{
-    @apply w-full relative lg:px-[17%] lg:py-[105px];
+    @apply w-full relative lg:px-[50px] lg:py-[105px];
   }
   .steps-circle{
     @apply rounded-full bg-transparent size-[33px] border border-white flex justify-center items-center text-[14px] text-white font-bold transition;

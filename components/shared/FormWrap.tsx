@@ -80,9 +80,9 @@ export const FormWrap = ({ currentStep, setCurrentStep}: FormWrapProps) => {
   }
 
   return (
-    <div className="w-[343px] h-auto bg-white rounded-lg absolute top-[99px] px-5 py-8">
+    <div className="w-[343px] md:w-[450px] md:mx-auto h-auto md:h-[560px] bg-white rounded-lg absolute top-[99px] md:static md:top-0 px-5 py-8">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 md:flex md:flex-col md:justify-between md:h-full">
             {switchStep()}
             {!isSubmited && (<StepButtons currentStep={currentStep} setCurrentStep={setCurrentStep} checker={checker}/>)}
           </form>

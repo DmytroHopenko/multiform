@@ -15,16 +15,16 @@ export const SecondStep = ({selectedPlan, setSelectedPlan, period, setPeriod}: S
     return (
         <div>
             <div>
-                <span className="text-denim text-[24px] font-bold mb-2">
+                <span className="text-denim text-[24px] md:text-[32px] font-bold mb-2">
                 Select your plan
                 </span>
-                <p className="text-grey text-[16px] font-normal w-[273px]">
+                <p className="text-grey text-[16px] font-normal w-[273px] md:w-full">
                 You have the option of monthly or yearly billing.
                 </p>
             </div>
-            <div className="flex flex-col gap-4 my-5">
+            <div className="flex flex-col md:flex-row gap-4 my-5">
                 {plan.map((plan) => (
-                    <div className="flex rounded-lg border border-border-color h-auto w-[295px] p-4 gap-4" key={plan.title} onClick={() => setSelectedPlan(plan)} id={`${selectedPlan?.title == plan.title && "active-plan"}`}>
+                    <div className="flex md:flex-col md:justify-between rounded-lg border border-border-color h-auto w-[295px] md:h-[160px] md:w-[138px] p-4 gap-4" key={plan.title} onClick={() => setSelectedPlan(plan)} id={`${selectedPlan?.title == plan.title && "active-plan"}`}>
                         <div>
                             <Image src={plan.img} height={40} width={40} alt={plan.title}/>
                         </div>

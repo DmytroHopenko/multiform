@@ -24,13 +24,13 @@ export const FourthStep = ({
   return (
     <div>
       {isSubmited ? (
-        <div className="flex flex-col justify-center items-center py-10">
+        <div className="flex flex-col justify-center items-center py-10 mt-[80px]">
           <div className="mb-5">
-            <Image src="/images/icon-thank-you.svg" height={56} width={56} alt="thx"/>
+            <Image src="/images/icon-thank-you.svg" height={56} width={56} alt="thx" className="md:size-[80px]"/>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-denim text-[24px] font-bold mb-3">Thank you!</span>
-            <p className="text-grey text-[16px] leading-5 text-center w-[295px]">
+            <span className="text-denim text-[24px] md:text-[32px] font-bold mb-3">Thank you!</span>
+            <p className="text-grey text-[16px] leading-5 text-center w-[295px] md:w-full">
             Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.
             </p>
           </div>
@@ -38,10 +38,10 @@ export const FourthStep = ({
       ) : (
         <>
           <div>
-            <span className="text-denim text-[24px] font-bold mb-2">
+            <span className="text-denim text-[24px] md:text-[32px] font-bold mb-2">
               Finishing up
             </span>
-            <p className="text-grey text-[16px] font-normal w-[273px]">
+            <p className="text-grey text-[16px] font-normal w-[273px] md:w-full">
               Double-check everything looks OK before confirming.
             </p>
           </div>
@@ -68,7 +68,7 @@ export const FourthStep = ({
               </p>
             </div>
             <div
-              className={`flex flex-col gap-1 ${
+              className={`flex flex-col gap-1 md:gap-5 ${
                 selectedThings.length !== 0 && "pt-4"
               }`}
             >
@@ -85,7 +85,7 @@ export const FourthStep = ({
               ))}
             </div>
           </div>
-          <div className="flex justify-between pt-4 pl-4 pr-4">
+          <div className="flex justify-between pt-4 md:pt-8 pl-4 pr-4">
             <p className="text-grey text-[14px leading-5]">
               Total ({period ? "per year" : "per month"})
             </p>

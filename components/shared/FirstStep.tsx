@@ -9,10 +9,10 @@ export const FirstStep = ({form}: FormProps) => {
     return(
         <div>
             <div>
-                <span className="text-denim text-[24px] font-bold mb-2">
+                <span className="text-denim text-[24px] md:text-[32px] font-bold mb-2">
                     Personal Info
                 </span>
-                <p className="text-grey text-[16px] font-normal w-[273px]">
+                <p className="text-grey text-[16px] font-normal w-[273px] md:w-full">
                 Please provide your name, email address, and phone number.
                 </p>
             </div>
